@@ -39,7 +39,7 @@ var entries = selectedEntries();
     message(c);
     message("Exported " + entries.length + " houby");
     */
-  var placemarks = []; 
+  placemarks: []; 
   
   addPlacemark: function(name, desc, latlon, altitude) {
     var coords = latlon.split(",");
