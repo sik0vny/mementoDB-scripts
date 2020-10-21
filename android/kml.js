@@ -1,12 +1,13 @@
 var Kml = {
   
   kml: function(name, contents) {
-    result  = '<?xml version="1.0" encoding="UTF-8"?>';
-    result += '<kml xmlns="http://www.opengis.net/kml/2.2">';
+    //result  = '<?xml version="1.0" encoding="UTF-8"?>';
+    //result += '<kml xmlns="http://www.opengis.net/kml/2.2">';
     result += "<Document>"
     result += contents;
     result += "</Document>";
     result += "</kml>";
+    return result;
   }
   
   placemark: function(name, desc, latlon, altitude) {
