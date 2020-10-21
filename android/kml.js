@@ -28,7 +28,7 @@ var Kml = {
     return result;
   },
  
-  writeFile: function(path, kml) {
+  writeFile: function(kml, path) {
    f = file(path);
    f.write(kml);
    f.close();
