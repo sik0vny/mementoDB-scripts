@@ -40,7 +40,7 @@ var entries = selectedEntries();
     message("Exported " + entries.length + " houby");
     */
   
-  kml: function(name, , contents, path) {
+  kml: function(name, contents) {
     result  = '<?xml version="1.0" encoding="UTF-8"?>';
     result += '<kml xmlns="http://www.opengis.net/kml/2.2">';
     result += "<Document>"
