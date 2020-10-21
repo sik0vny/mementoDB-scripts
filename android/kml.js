@@ -1,5 +1,23 @@
+var AndroidAlarm = {
+  /**
+    Create an alarm
+    */
+    create: function(hour, minutes, message, options) {
+        
+    },
+    
+   /**
+    Create a timer
+    */
+    timer: function(length, message, skipUI) {
+       
+    }
+    
+};
+
+
 var Kml = {
-  
+ 
   kml: function(name, contents) {
     //result  = '<?xml version="1.0" encoding="UTF-8"?>';
     //result += '<kml xmlns="http://www.opengis.net/kml/2.2">';
@@ -22,16 +40,11 @@ var Kml = {
     result += "     </Point>\n";
     result += "  </Placemark>\n";
     return result; 
-  }
+    }
   
-  
-  /**  
-  Generate a kml file
-    @param {string} latlon
-    @param {string} altitude
+};
 
-
-var entries = selectedEntries();
+/*var entries = selectedEntries();
 
     var c = '<?xml version="1.0" encoding="UTF-8"?>\n';
     c += '<kml xmlns="http://www.opengis.net/kml/2.2">\n';
@@ -66,4 +79,4 @@ var entries = selectedEntries();
     message("Exported " + entries.length + " houby");
     */
    
-}
+
