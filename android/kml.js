@@ -33,7 +33,7 @@ var Kml = {
    f.close();
   },
   
-  create: function(name, options) {
+  create: function() {
     
     i = intent("android.intent.action.VIEW");
     i.mimeType("application/vnd.google-earth.kml+xml");
