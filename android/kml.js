@@ -4,6 +4,7 @@ var Kml = {
     @param {string} latlon
     @param {string} altitude
 
+
 var entries = selectedEntries();
 
     var c = '<?xml version="1.0" encoding="UTF-8"?>\n';
@@ -27,14 +28,6 @@ var entries = selectedEntries();
 
       let desc = "Time: " + datetime + "\n";
       desc += "GPS Accuracy: " + acc + "m";
-
-      c += "  <Placemark>\n";
-      c += "    <name>" + strain + "</name>\n";
-      c += "     <description>" + desc + "</description>\n";
-      c += "     <Point>\n";
-      c += "       <coordinates>" + coords + "</coordinates>\n";
-      c += "     </Point>\n";
-      c += "  </Placemark>\n";
     }
 
     c += "</kml>";
@@ -45,11 +38,10 @@ var entries = selectedEntries();
 
     message(c);
     message("Exported " + entries.length + " houby");
-
-
-
     */
-  placemark: function(name, desc, latlon, altitude) {
+  var placemarks = []; 
+  
+  addPlacemark: function(name, desc, latlon, altitude) {
     var coords = latlon.split(",");
     coords = coords[1] + "," + coords[0] + "," + altitude;
     
@@ -60,6 +52,6 @@ var entries = selectedEntries();
     result += "       <coordinates>" + coords + "</coordinates>\n";
     result += "     </Point>\n";
     result += "  </Placemark>\n";
-    return result;
+    placemarks.push(result);  
   }
 }
