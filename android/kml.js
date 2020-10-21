@@ -1,5 +1,9 @@
 var Kml = {
   
+  
+  
+  
+  
   placemark: function(name, desc, latlon, altitude) {
     var coords = latlon.split(",");
     coords = coords[1] + "," + coords[0] + "," + altitude;
