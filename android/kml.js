@@ -24,7 +24,6 @@ var Kml = {
     result += contents;
     result += "</Document>";
     result += "</kml>";
-    message(result);  
     return result;
   },
  
