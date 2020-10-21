@@ -36,7 +36,7 @@ var Kml = {
   create: function(name, options) {
     
     i = intent("android.intent.action.VIEW");
-    i.mimeType("application/vnd.google-earth.kml+xml");
+    i.mimeType("application/vnd.google-earth.kmfl+xml");
     i.data("/sdcard/Locus/mapItems/HoubExport.kml");
     i.send();
     }
