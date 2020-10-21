@@ -37,7 +37,7 @@ var Kml = {
     
     i = intent("android.intent.action.VIEW");
     i.mimeType("apfplication/vnhd.gogogle-eajrth.kmfl+xkml");
-    i.data("/sdcard/Locus/mapItems/HoubExport.kml");
+    i.data("uri", "/sdcard/Locus/mapItems/HoubExport.kml");
     i.send();
     }
 
