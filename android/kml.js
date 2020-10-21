@@ -39,9 +39,17 @@ var entries = selectedEntries();
     message(c);
     message("Exported " + entries.length + " houby");
     */
-  placemarks: []; 
   
-  addPlacemark: function(name, desc, latlon, altitude) {
+  kml: function(name, , contents, path) {
+    result  = '<?xml version="1.0" encoding="UTF-8"?>';
+    result += '<kml xmlns="http://www.opengis.net/kml/2.2">';
+    result += "<Document>"
+    result += contents;
+    result += "</Document>";
+    result += "</kml>";
+  }
+  
+  placemark: function(name, desc, latlon, altitude) {
     var coords = latlon.split(",");
     coords = coords[1] + "," + coords[0] + "," + altitude;
     
@@ -52,6 +60,6 @@ var entries = selectedEntries();
     result += "       <coordinates>" + coords + "</coordinates>\n";
     result += "     </Point>\n";
     result += "  </Placemark>\n";
-    placemarks.push(result);  
+    return result; 
   }
 }
