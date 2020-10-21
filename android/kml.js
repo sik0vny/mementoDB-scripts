@@ -53,12 +53,13 @@ var entries = selectedEntries();
     var coords = latlon.split(",");
     coords = coords[1] + "," + coords[0] + "," + altitude;
     
-    c =  "  <Placemark>\n";
-    c += "    <name>" + name + "</name>\n";
-    c += "     <description>" + desc + "</description>\n";
-    c += "     <Point>\n";
-    c += "       <coordinates>" + coords + "</coordinates>\n";
-    c += "     </Point>\n";
-    c += "  </Placemark>\n";
+    result =  "  <Placemark>\n";
+    result += "    <name>" + name + "</name>\n";
+    result += "     <description>" + desc + "</description>\n";
+    result += "     <Point>\n";
+    result += "       <coordinates>" + coords + "</coordinates>\n";
+    result += "     </Point>\n";
+    result += "  </Placemark>\n";
+    return result;
   }
 }
