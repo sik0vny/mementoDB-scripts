@@ -31,7 +31,15 @@ var Kml = {
    f = file(path);
    f.write(kml);
    f.close();
-  }
+  },
+  
+  create: function(name, options) {
+    
+    i = intent("android.intent.action.VIEW");
+    i.mimeType("application/vnd.google-earth.kml+xml");
+    i.data("/sdcard/Locus/mapItems/HoubExport.kml");
+    i.send();
+    }
 
 };
 
