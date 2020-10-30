@@ -1,5 +1,21 @@
 var Kml = {
 
+  genStyle: function(icon) {
+    result =  "  <Style id='" + icon + "'>\n";
+    result += "  <IconStyle>\n";
+    result += "    <Icon><href>" + icon + "</href></Icon>\n";
+    result += "    <hotSpot x='0.5' y='0.5' xunits='fraction' yunits='fraction' />\n";
+    result += "  </IconStyle>\n";  
+    result += "  </Style>\n";
+    return result; 
+  }
+  
+  genStyles: function(icons) {
+    result = "";
+    icons.forEach(icon => result += genStyle(icon));
+    return result;
+  }
+  
   genPlacemark: function(name, desc, latlon, altitude) {
     var coords = (latlon + "").split(",");
     coords = coords[1] + "," + coords[0];
@@ -33,17 +49,8 @@ var Kml = {
    f.close();
   },
   
-  create: function() {
-    
-    i = intent("android.intent.action.VIEW");
-    i.mimeType("application/vnd.google-earth.kml+xml");
-    i.data("/sdcard/Media/HoubExport.kml");
-    
-    i.send();
-    }
-
 };
 
-Kml.elo = {};
+Kml.elo = {"tt"};
 
 
