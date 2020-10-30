@@ -9,7 +9,6 @@ var Kml = {
     result += "  </Style>\n";
     return result; 
   },
-  
   genStyles: function(icons) {
     result = "";
     icons.forEach(icon => result += genStyle(icon));
@@ -50,7 +49,3 @@ var Kml = {
   },
   
 };
-
-Kml.elo = "tt";
-
-
