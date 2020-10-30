@@ -44,4 +44,6 @@ var Kml = {
 
 };
 
+Kml.elo = {};
+
 
