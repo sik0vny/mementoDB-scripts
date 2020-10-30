@@ -1,7 +1,7 @@
 var Kml = {
 
-  genStyle: function(icon) {
-    result =  "  <Style id='" + icon + "'>\n";
+  genStyle: function(name, icon) {
+    result =  "  <Style id='" + name + "'>\n";
     result += "  <IconStyle>\n";
     result += "    <Icon><href>" + icon + "</href></Icon>\n";
     result += "    <hotSpot x='0.5' y='0.5' xunits='fraction' yunits='fraction' />\n";
@@ -26,6 +26,7 @@ var Kml = {
     result =  "  <Placemark>\n";
     result += "    <name>" + name + "</name>\n";
     result += "     <description>" + desc + "</description>\n";
+    result += "       <styleUrl>#" + name + "</styleUrl>\n";
     result += "     <Point>\n";
     result += "       <coordinates>" + coords + "</coordinates>\n";
     result += "     </Point>\n";
