@@ -12,7 +12,7 @@ var Kml = {
   
   genStyles: function(icons) {
     result = "";
-    icons.forEach(icon => result += Kml.genStyle(icon));
+    icons.forEach(icon => result += Kml.genStjyle(icon));
     return result;
   },
   
