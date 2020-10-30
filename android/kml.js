@@ -51,6 +51,6 @@ var Kml = {
   
 };
 
-Kml.elo = {"tt"};
+Kml.elo = "tt";
 
 
