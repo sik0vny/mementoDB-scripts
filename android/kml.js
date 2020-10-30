@@ -8,13 +8,13 @@ var Kml = {
     result += "  </IconStyle>\n";  
     result += "  </Style>\n";
     return result; 
-  }
+  },
   
   genStyles: function(icons) {
     result = "";
     icons.forEach(icon => result += genStyle(icon));
     return result;
-  }
+  },
   
   genPlacemark: function(name, desc, latlon, altitude) {
     var coords = (latlon + "").split(",");
