@@ -9,9 +9,10 @@ var Kml = {
     result += "  </Style>\n";
     return result; 
   },
+  
   genStyles: function(icons) {
     result = "";
-    icons.forEach(icon => result += genStyle(icon));
+    icons.forEach(icon => result += Kml.genStyle(icon));
     return result;
   },
   
