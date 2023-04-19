@@ -16,17 +16,22 @@ var Kml = {
     return result;
   },
   
-  genPlacemark: function(name, desc, latlon, altitude) {
+  genPlacemark: function(name, desc, latlon, styleUrl, altitude) {
     var coords = (latlon + "").split(",");
     coords = coords[1] + "," + coords[0];
     if (altitude != null) {
       coords += "," + altitude;
     }
     
+    if (styleUrl == null) {
+      styleUrl = name
+    }
+    
+    
     result =  "  <Placemark>\n";
     result += "    <name>" + name + "</name>\n";
     result += "     <description>" + desc + "</description>\n";
-    result += "       <styleUrl>#" + name + "</styleUrl>\n";
+    result += "       <styleUrl>#" + styleUrl + "</styleUrl>\n";
     result += "     <Point>\n";
     result += "       <coordinates>" + coords + "</coordinates>\n";
     result += "     </Point>\n";
